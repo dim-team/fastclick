@@ -1,6 +1,6 @@
 {
   "name": "dim-component-transformer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "transform a github repo into installable dim-component",
   "private": true,
   "dependencies": {

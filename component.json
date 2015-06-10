@@ -1,0 +1,7 @@
+{
+  "version": "1.0.3",
+  "name": "fastclick",
+  "repo": "dim-team/fastclick",
+  "description": "a dim-installable fork of ftlabs/fastclick",
+  "main": "fastclick.js"
+}

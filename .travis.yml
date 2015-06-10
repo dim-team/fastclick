@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- '0.11'
+before_install:
+- npm config set loglevel warn
+script:
+- node --harmony .dim/transform
+after_success:
+- git config --global user.email "hincubus@gmail.com"
+- git config --global user.name "Hinc Liu"
+- git remote set-url origin https://github.com/dim-team/fastclick.git
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- git checkout master
+- git add .
+- git commit -am "[ci skip]"
+- git push origin master
+branches:
+  only:
+  - master
+env:
+  global:
+  - secure: CpnM4KFtv91LYdkztobd1+555L2h8xLRRdw7Gk+PG+q/PxJ94JAr78Z89KfgzjxVID8vUJ+f1/5u8qSf06xXslPzOQ3Eehq1c/6WIogXQuD/2zO5YIvyxCfonnOBqYDtxdLGqGpk7Q07Jvcj26Jnk0/0pzoRa0ON8oZrqnKDsh8=
